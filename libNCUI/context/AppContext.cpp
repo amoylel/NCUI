@@ -437,32 +437,6 @@ namespace amo {
         
         GdiplusStartup(&m_gdiplusToken, &StartupInput, NULL);
         
-        //for (int i = 0; i < 1; ++i) {
-        //    Clipboard clipboard;
-        //    std::string str1 = clipboard.readImageBase64(L".jpg");
-        //    std::string str2 = clipboard.readImageBase64(L".bmp");
-        //    std::string str3 = clipboard.readImageBase64(L".png");
-        //    std::string str4 = clipboard.readImageBase64(L".gif");
-        //
-        //    clipboard.saveImage(L"D:\\2222.jpg");
-        //    clipboard.saveImage(L"D:\\2222.png");
-        //    clipboard.saveImage(L"D:\\2222.bmp");
-        //    //clipboard.saveImage(L"D:\\2222.emf");
-        //    amo::filestream ifs("D:\\test3.html", std::ios::in | std::ios::binary);
-        //    std::string ssss = ifs.read_all();
-        //    clipboard.writeHtml(ssss);
-        //    std::string sss2 = clipboard.readHtml();
-        //    std::string sss3 = clipboard.readText();
-        //    HBITMAP hBitmap = clipboard.readBitmap();
-        //
-        //    if (hBitmap != NULL) {
-        //        amo::SaveHBitmapToFile(hBitmap, L"D:\\2222.bmp", L"image/bmp");
-        //        DeleteObject(hBitmap);
-        //    }
-        //
-        //}
-        
-        
         void* sandbox_info = NULL;
         CefSettings settings = *getDefaultAppSettings();
         
@@ -491,41 +465,7 @@ namespace amo {
             auto manager = BrowserWindowManager::getInstance();
             manager->init();
             
-            
-            
-            Clipboard clipboard;
-            //std::vector<std::wstring> files;
-            //
-            //std::wstring ss2 = L"D:\\2222.png";
-            //files.push_back(ss2);
-            //ss2 = L"D:\\2222.bmp";
-            //files.push_back(ss2);
-            //ss2 = L"D:\\2222.jpg";
-            //files.push_back(ss2);
-            //ss2 = L"D:\\Pic";
-            //files.push_back(ss2);
-            //ss2 = L"E:\\adb_all";
-            //files.push_back(ss2);
-            //ss2 = L"D:\\2222.jpg";
-            
-            ///*clipboard.writeFiles(files);
-            //auto vv = clipboard.readFiles();*/
-            //std::string base64Str = clipboard.readImageBase64();
-            ///*clipboard.writeText("12324");
-            //clipboard.empty();*/
-            //clipboard.writeImageBase64(base64Str);
-            //clipboard.saveImage(ss2);
-            /*  clipboard.writeImageBase64("data:image/jpeg;base64,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");*/
-            std::string ss = clipboard.readImageBase64(L".jpeg");
-            clipboard.writeImageBase64(ss);
-            clipboard.writeImageBase64(ss);
-            std::ofstream ofs("E:\\test.txt", std::ios::out | std::ios::binary);
-            ofs.write(ss.c_str(), ss.size());
-            ofs.close();
-            std::string  ss2 = clipboard.readImageBase64(L".jpeg");
-            clipboard.saveImage(L"E:\\3233333.jpg");
-            std::string  ss4 = clipboard.readImageBase64(L".jpeg");
-            ClipboardMonitor::getInstance();;
+            ClipboardMonitor::getInstance();
         }
         
         auto pAppSettings = getDefaultAppSettings();

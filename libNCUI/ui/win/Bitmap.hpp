@@ -710,17 +710,17 @@ namespace amo {
             RealizePalette(hmemDC);
         }
         
-        bmFile = CreateFileA("D:\\aaa.bmp", GENERIC_WRITE, 0, NULL, CREATE_ALWAYS,
-                             FILE_ATTRIBUTE_NORMAL, NULL);
-                             
-        if (bmFile == INVALID_HANDLE_VALUE) {
-            //AfxMessageBoxA("Create File Error!!");
-        }
-        
-        WriteFile(bmFile, &bmFileHeader, sizeof(BITMAPFILEHEADER), &dwWritten, NULL);
-        WriteFile(bmFile, &bmInfo, sizeof(BITMAPINFOHEADER), &dwWritten, NULL);
-        WriteFile(bmFile, lpData, ImageSize, &dwWritten, NULL);
-        CloseHandle(bmFile);
+        //bmFile = CreateFileA("D:\\aaa.bmp", GENERIC_WRITE, 0, NULL, CREATE_ALWAYS,
+        //                     FILE_ATTRIBUTE_NORMAL, NULL);
+        //
+        //if (bmFile == INVALID_HANDLE_VALUE) {
+        //    //AfxMessageBoxA("Create File Error!!");
+        //}
+        //
+        //WriteFile(bmFile, &bmFileHeader, sizeof(BITMAPFILEHEADER), &dwWritten, NULL);
+        //WriteFile(bmFile, &bmInfo, sizeof(BITMAPINFOHEADER), &dwWritten, NULL);
+        //WriteFile(bmFile, lpData, ImageSize, &dwWritten, NULL);
+        //CloseHandle(bmFile);
         HeapFree(GetProcessHeap(), HEAP_NO_SERIALIZE, lpData);
         ::ReleaseDC(0, hScreenDC);
         DeleteDC(hmemDC);
