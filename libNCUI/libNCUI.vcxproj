@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AA9B7D1A-C7A0-4D9C-BEFA-8F8BD56F5BA5}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>libcef_node</RootNamespace>
+    <ProjectName>libNCUI</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140_xp</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)\Microsoft.Cpp.Common.user.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)\Microsoft.Cpp.Common.user.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)\Microsoft.Cpp.Common.user.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)\Microsoft.Cpp.Common.user.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <LibraryPath>$(SolutionDir)third_party\cef\lib\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <LibraryPath>$(SolutionDir)third_party\cef\lib\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CEF_USE_ATL;BUILDING_NCUI_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)node\src;$(SolutionDir)node\tools\msvs\genfiles;$(SolutionDir)node\deps\uv\src\ares;$(SolutionDir)node\deps\v8;deps\cares\include;$(SolutionDir)node\deps\v8\include;$(SolutionDir)node\deps\openssl\openssl\include;$(SolutionDir)node\deps\zlib;$(SolutionDir)node\deps\http_parser;$(SolutionDir)node\deps\uv\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj -Zm512 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <AdditionalManifestFiles>
+      </AdditionalManifestFiles>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;CEF_USE_ATL;BUILDING_NCUI_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)node\src;$(SolutionDir)node\tools\msvs\genfiles;$(SolutionDir)node\deps\uv\src\ares;$(SolutionDir)node\deps\v8;deps\cares\include;$(SolutionDir)node\deps\v8\include;$(SolutionDir)node\deps\openssl\openssl\include;$(SolutionDir)node\deps\zlib;$(SolutionDir)node\deps\http_parser;$(SolutionDir)node\deps\uv\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj -Zm512 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CEF_USE_ATL;BUILDING_NCUI_SHARED;_NDEBUG;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;_WIN32;UNICODE;_UNICODE;WINVER=0x0602;_WIN32_WINNT=0x602;_HAS_EXCEPTIONS=1;PSAPI_VERSION=0;NCUI_NO_D2D1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/bigobj -Zm512 %(AdditionalOptions)</AdditionalOptions>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
+      <DisableSpecificWarnings>4099;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalOptions>/ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;CEF_USE_ATL;BUILDING_NCUI_SHARED;_NDEBUG;__STDC_CONSTANT_MACROS;__STDC_FORMAT_MACROS;_WIN32;UNICODE;_UNICODE;WINVER=0x0602;_WIN32_WINNT=0x602;_HAS_EXCEPTIONS=0;PSAPI_VERSION=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/bigobj -Zm512 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="cefsimple\cefsimple_win.cc" />
+    <ClCompile Include="cefsimple\simple_app.cc" />
+    <ClCompile Include="cefsimple\simple_handler.cc" />
+    <ClCompile Include="cefsimple\simple_handler_win.cc" />
+    <ClCompile Include="context\AppContext.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="handler\BrowserProcessHandler.cpp" />
+    <ClCompile Include="handler\ClientApp.cpp" />
+    <ClCompile Include="handler\ClientHandler.cpp" />
+    <ClCompile Include="handler\ContextMenuHandler.cpp" />
+    <ClCompile Include="handler\DialogHandler.cpp" />
+    <ClCompile Include="handler\DisplayHandler.cpp" />
+    <ClCompile Include="handler\DownloadHandler.cpp" />
+    <ClCompile Include="handler\DragHandler.cpp" />
+    <ClCompile Include="handler\DummyClientHandler.cpp" />
+    <ClCompile Include="handler\FocusHandler.cpp" />
+    <ClCompile Include="handler\GeolocationHandler.cpp" />
+    <ClCompile Include="handler\JSDialogHandler.cpp" />
+    <ClCompile Include="handler\KeyboardHandler.cpp" />
+    <ClCompile Include="handler\LifeSpanHandler.cpp" />
+    <ClCompile Include="handler\LoadHandler.cpp" />
+    <ClCompile Include="handler\MessageRouterBrowserSide.cpp" />
+    <ClCompile Include="handler\RenderHandler.cpp" />
+    <ClCompile Include="handler\RenderProcessHandler.cpp" />
+    <ClCompile Include="handler\RequestHandler.cpp" />
+    <ClCompile Include="handler\ResourceBundleHandler.cpp" />
+    <ClCompile Include="handler\ResourceHandler.cpp" />
+    <ClCompile Include="handler\URLRequestClient.cpp" />
+    <ClCompile Include="handler\UtilityV8Handler.cpp" />
+    <ClCompile Include="handler\V8ExtentionHandler.cpp" />
+    <ClCompile Include="module\AppExHandler.cpp" />
+    <ClCompile Include="module\basic\TypeConvertor.cpp" />
+    <ClCompile Include="module\basic\V8HandlerManager.cpp" />
+    <ClCompile Include="module\ConstantAttributeV8Handler.cpp" />
+    <ClCompile Include="module\dll\DllManager.cpp" />
+    <ClCompile Include="module\dll\DllRunner.cpp" />
+    <ClCompile Include="module\dll\DllV8Handler.cpp" />
+    <ClCompile Include="module\dll\DllValueHandler.cpp" />
+    <ClCompile Include="module\dll\JsTypeMapHandler.cpp" />
+    <ClCompile Include="module\dll\TypeMapManager.cpp" />
+    <ClCompile Include="module\DragWindowV8Handler.cpp" />
+    <ClCompile Include="module\EventEmitterV8Handler.cpp" />
+    <ClCompile Include="module\IPCRendererV8Handler.cpp" />
+    <ClCompile Include="module\JsClassObjectV8Handler.cpp" />
+    <ClCompile Include="module\JsClassV8Handler.cpp" />
+    <ClCompile Include="module\JSV8Handler.cpp" />
+    <ClCompile Include="module\transfer\BigStringTransfer.cpp" />
+    <ClCompile Include="node\CefCallbackHandler.cpp" />
+    <ClCompile Include="node\NodeContextMenuHandler.cpp" />
+    <ClCompile Include="node\NodeDialogHandler.cpp" />
+    <ClCompile Include="node\NodeDisplayHandler.cpp" />
+    <ClCompile Include="node\NodeDownloadHandler.cpp" />
+    <ClCompile Include="node\NodeDragHandler.cpp" />
+    <ClCompile Include="node\NodeFocusHandler.cpp" />
+    <ClCompile Include="node\NodeGeolocationHandler.cpp" />
+    <ClCompile Include="node\NodeHandlerHelper.cpp" />
+    <ClCompile Include="node\NodeJSDialogHandler.cpp" />
+    <ClCompile Include="node\NodeKeyboardHandler.cpp" />
+    <ClCompile Include="node\NodeLifeSpanHandler.cpp" />
+    <ClCompile Include="node\NodeLoadHandler.cpp" />
+    <ClCompile Include="node\NodeMessageHandler.cpp" />
+    <ClCompile Include="node\NodeRenderHandler.cpp" />
+    <ClCompile Include="node\NodeRequestHandler.cpp" />
+    <ClCompile Include="libNCUI.cpp" />
+    <ClCompile Include="scheme\DllFileHandler.cpp" />
+    <ClCompile Include="scheme\DllFileManager.cpp" />
+    <ClCompile Include="scheme\LocalSchemeHandler.cpp" />
+    <ClCompile Include="scheme\NativeFileHandler.cpp" />
+    <ClCompile Include="scheme\UrlResourceHandlerFactory.cpp" />
+    <ClCompile Include="scheme\ZipFileHandler.cpp" />
+    <ClCompile Include="scheme\ZipFileManger.cpp" />
+    <ClCompile Include="settings\AppSettings.cpp" />
+    <ClCompile Include="settings\BasicSettings.cpp" />
+    <ClCompile Include="settings\BrowserWindowSettings.cpp" />
+    <ClCompile Include="settings\DowloaderSettings.cpp" />
+    <ClCompile Include="settings\GlobalShortcutSettings.cpp" />
+    <ClCompile Include="settings\MenuWindowSettings.cpp" />
+    <ClCompile Include="settings\NativeWindowSettings.cpp" />
+    <ClCompile Include="settings\OverlapSettings.cpp" />
+    <ClCompile Include="settings\RequestSettings.cpp" />
+    <ClCompile Include="settings\SplashWindowSettings.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="transfer\ActionTransfer.cpp" />
+    <ClCompile Include="transfer\AppTransfer.cpp" />
+    <ClCompile Include="transfer\BrowserHostTransfer.cpp" />
+    <ClCompile Include="transfer\BrowserTransfer.cpp" />
+    <ClCompile Include="transfer\BrowserTransferMgr.cpp" />
+    <ClCompile Include="transfer\BrowserWindowTransfer.cpp" />
+    <ClCompile Include="transfer\ClipboardTransfer.cpp" />
+    <ClCompile Include="transfer\CommandLineTransfer.cpp" />
+    <ClCompile Include="transfer\ControlTransfer.cpp" />
+    <ClCompile Include="transfer\DesktopTransfer.cpp" />
+    <ClCompile Include="transfer\DialogTransfer.cpp" />
+    <ClCompile Include="transfer\DownloaderTransfer.cpp" />
+    <ClCompile Include="transfer\EventTransfer.cpp" />
+    <ClCompile Include="transfer\FrameTransfer.cpp" />
+    <ClCompile Include="transfer\GlobalShortcutTransfer.cpp" />
+    <ClCompile Include="transfer\IPCTransfer.cpp" />
+    <ClCompile Include="transfer\KeyboardTransfer.cpp" />
+    <ClCompile Include="transfer\MenuTransfer.cpp" />
+    <ClCompile Include="transfer\MouseTransfer.cpp" />
+    <ClCompile Include="transfer\NativeWindowTransfer.cpp" />
+    <ClCompile Include="transfer\NetTransfer.cpp" />
+    <ClCompile Include="transfer\RendererThreadTransfer.cpp" />
+    <ClCompile Include="transfer\RendererTransferMgr.cpp" />
+    <ClCompile Include="transfer\RequestTransfer.cpp" />
+    <ClCompile Include="transfer\ShellTransfer.cpp" />
+    <ClCompile Include="transfer\SplashTransfer.cpp" />
+    <ClCompile Include="transfer\SystemInfo.cpp" />
+    <ClCompile Include="transfer\SystemTransfer.cpp" />
+    <ClCompile Include="transfer\TransferMgr.cpp" />
+    <ClCompile Include="transfer\TrayTransfer.cpp" />
+    <ClCompile Include="transfer\UIThreadTransfer.cpp" />
+    <ClCompile Include="transfer\URLRequestClientTransfer.cpp" />
+    <ClCompile Include="transfer\URLRequestTransfer.cpp" />
+    <ClCompile Include="ui\win\ActionPreprocessor.cpp" />
+    <ClCompile Include="ui\win\BrowserWindow.cpp" />
+    <ClCompile Include="ui\win\BrowserWindowManager.cpp" />
+    <ClCompile Include="ui\win\BrowserWindowSkin.cpp" />
+    <ClCompile Include="ui\win\BytesWriteHandler.cpp" />
+    <ClCompile Include="ui\win\clipboard\Clipboard.cpp" />
+    <ClCompile Include="ui\win\clipboard\ClipboardMonitor.cpp" />
+    <ClCompile Include="ui\win\clipboard\ClipWatcher.cpp" />
+    <ClCompile Include="ui\win\Imm32Manager.cpp" />
+    <ClCompile Include="ui\win\LayeredWindow.cpp" />
+    <ClCompile Include="ui\win\LocalWindow.cpp" />
+    <ClCompile Include="ui\win\menu\ContextMenuWindow.cpp" />
+    <ClCompile Include="ui\win\menu\MenuElementUI.cpp" />
+    <ClCompile Include="ui\win\menu\MenuUI.cpp" />
+    <ClCompile Include="ui\win\menu\MenuWindow.cpp" />
+    <ClCompile Include="ui\win\MessageWindow.cpp" />
+    <ClCompile Include="ui\win\NativeWindow.cpp" />
+    <ClCompile Include="ui\win\NativeWindowProxy.cpp" />
+    <ClCompile Include="ui\win\OffscreenDragdrop.cpp" />
+    <ClCompile Include="ui\win\OffScreenRenderView.cpp" />
+    <ClCompile Include="ui\win\PictureView.cpp" />
+    <ClCompile Include="ui\win\renderer\D2D1ViewRenderer.cpp" />
+    <ClCompile Include="ui\win\renderer\GdiRenderer.cpp" />
+    <ClCompile Include="ui\win\RenderView.cpp" />
+    <ClCompile Include="ui\win\SharedMemory.cpp" />
+    <ClCompile Include="ui\win\SplashWindow.cpp" />
+    <ClCompile Include="ui\win\tray\NotifyWindow.cpp" />
+    <ClCompile Include="ui\win\tray\Tray.cpp" />
+    <ClCompile Include="ui\win\tray\TrayBase.cpp" />
+    <ClCompile Include="ui\win\ViewRenderer.cpp" />
+    <ClCompile Include="ui\win\WebkitView.cpp" />
+    <ClCompile Include="ui\win\ShadowWindow.cpp" />
+    <ClCompile Include="utility\libzippp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cefsimple\simple_app.h" />
+    <ClInclude Include="cefsimple\simple_handler.h" />
+    <ClInclude Include="context\AppContext.h" />
+    <ClInclude Include="docs\AdvancedUsage.hpp" />
+    <ClInclude Include="docs\AppGen.hpp" />
+    <ClInclude Include="docs\Demos.hpp" />
+    <ClInclude Include="docs\DispatchEvent.hpp" />
+    <ClInclude Include="docs\QuickStart.hpp" />
+    <ClInclude Include="docs\UseNodeJs.hpp" />
+    <ClInclude Include="handler\BrowserManager.hpp" />
+    <ClInclude Include="handler\BrowserProcessHandler.h" />
+    <ClInclude Include="handler\CefHeader.hpp" />
+    <ClInclude Include="handler\CefProcessExchanger.hpp" />
+    <ClInclude Include="handler\ClientApp.h" />
+    <ClInclude Include="handler\ClientHandler.h" />
+    <ClInclude Include="handler\ContextMenuHandler.h" />
+    <ClInclude Include="handler\DialogHandler.h" />
+    <ClInclude Include="handler\DisplayHandler.h" />
+    <ClInclude Include="handler\DownloadHandler.h" />
+    <ClInclude Include="handler\DragHandler.h" />
+    <ClInclude Include="handler\DummyClientHandler.h" />
+    <ClInclude Include="handler\FocusHandler.h" />
+    <ClInclude Include="handler\GeolocationHandler.h" />
+    <ClInclude Include="handler\HandlerDelegate.hpp" />
+    <ClInclude Include="handler\JSDialogHandler.h" />
+    <ClInclude Include="handler\KeyboardHandler.h" />
+    <ClInclude Include="handler\LifeSpanHandler.h" />
+    <ClInclude Include="handler\LoadHandler.h" />
+    <ClInclude Include="handler\MessageHandlerDelegate.hpp" />
+    <ClInclude Include="handler\MessageRouterBrowserSide.h" />
+    <ClInclude Include="handler\patch\cef_geolocation_handler.h" />
+    <ClInclude Include="handler\RenderHandler.h" />
+    <ClInclude Include="handler\RenderProcessHandler.h" />
+    <ClInclude Include="handler\RequestHandler.h" />
+    <ClInclude Include="handler\ResourceBundleHandler.h" />
+    <ClInclude Include="handler\ResourceHandler.h" />
+    <ClInclude Include="handler\RunFileDialogCallback.hpp" />
+    <ClInclude Include="handler\URLRequestClient.h" />
+    <ClInclude Include="handler\UtilityV8Handler.h" />
+    <ClInclude Include="handler\V8ExtentionHandler.h" />
+    <ClInclude Include="include\version.h" />
+    <ClInclude Include="ipc\Any.hpp" />
+    <ClInclude Include="ipc\AsyncFunctionManager.hpp" />
+    <ClInclude Include="ipc\BlobManager.hpp" />
+    <ClInclude Include="ipc\IPCMessage.hpp" />
+    <ClInclude Include="ipc\MessageLauncher.hpp" />
+    <ClInclude Include="ipc\ProcessExchanger.hpp" />
+    <ClInclude Include="ipc\IPCEmitter.hpp" />
+    <ClInclude Include="ipc\RenderMessageEmitter.hpp" />
+    <ClInclude Include="ipc\UIMessageBroadcaster.hpp" />
+    <ClInclude Include="ipc\UIMessageEmitter.hpp" />
+    <ClInclude Include="module\AppExHandler.h" />
+    <ClInclude Include="module\basic\ClassMethodMgr.hpp" />
+    <ClInclude Include="module\basic\EventFunctionManager.h" />
+    <ClInclude Include="module\basic\TypeConvertor.h" />
+    <ClInclude Include="module\basic\V8HandlerManager.h" />
+    <ClInclude Include="module\ConstantAttributeV8Handler.h" />
+    <ClInclude Include="module\dll\DllManager.h" />
+    <ClInclude Include="module\dll\DllRunner.h" />
+    <ClInclude Include="module\dll\DllV8Handler.h" />
+    <ClInclude Include="module\dll\DllValueAccessor.h" />
+    <ClInclude Include="module\dll\DllValueHandler.h" />
+    <ClInclude Include="module\dll\JsTypeMapHandler.h" />
+    <ClInclude Include="module\dll\TypeMapManager.h" />
+    <ClInclude Include="module\DragWindowV8Handler.h" />
+    <ClInclude Include="module\EventEmitterV8Handler.h" />
+    <ClInclude Include="module\IPCRendererV8Handler.h" />
+    <ClInclude Include="module\JsClassObjectV8Handler.h" />
+    <ClInclude Include="module\JsClassV8Handler.h" />
+    <ClInclude Include="module\JSV8Handler.h" />
+    <ClInclude Include="module\transfer\BigStringTransfer.h" />
+    <ClInclude Include="node\CefCallbackHandler.h" />
+    <ClInclude Include="node\NodeContextMenuHandler.h" />
+    <ClInclude Include="node\NodeDialogHandler.h" />
+    <ClInclude Include="node\NodeDisplayHandler.h" />
+    <ClInclude Include="node\NodeDownloadHandler.h" />
+    <ClInclude Include="node\NodeDragHandler.h" />
+    <ClInclude Include="node\NodeFocusHandler.h" />
+    <ClInclude Include="node\NodeGeolocationHandler.h" />
+    <ClInclude Include="node\NodeHandlerHelper.h" />
+    <ClInclude Include="node\NodeJSDialogHandler.h" />
+    <ClInclude Include="node\NodeKeyboardHandler.h" />
+    <ClInclude Include="node\NodeLifeSpanHandler.h" />
+    <ClInclude Include="node\NodeLoadHandler.h" />
+    <ClInclude Include="node\NodeMessageHandler.h" />
+    <ClInclude Include="node\NodeRenderHandler.h" />
+    <ClInclude Include="node\NodeRequestHandler.h" />
+    <ClInclude Include="libNCUI.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="scheme\DllFileHandler.h" />
+    <ClInclude Include="scheme\DllFileManager.h" />
+    <ClInclude Include="scheme\LocalSchemeHandler.h" />
+    <ClInclude Include="scheme\NativeFileHandler.h" />
+    <ClInclude Include="scheme\UrlResourceHandlerFactory.h" />
+    <ClInclude Include="scheme\ZipFileHandler.h" />
+    <ClInclude Include="scheme\ZipFileManager.h" />
+    <ClInclude Include="settings\AppSettings.h" />
+    <ClInclude Include="settings\BasicSettings.h" />
+    <ClInclude Include="settings\BrowserWindowSettings.h" />
+    <ClInclude Include="settings\DowloaderSettings.h" />
+    <ClInclude Include="settings\GlobalShortcutSettings.h" />
+    <ClInclude Include="settings\MenuWindowSettings.h" />
+    <ClInclude Include="settings\NativeWindowSettings.h" />
+    <ClInclude Include="settings\OverlapSettings.h" />
+    <ClInclude Include="settings\RequestSettings.h" />
+    <ClInclude Include="settings\SplashWindowSettings.h" />
+    <ClInclude Include="settings\ThemeSettings.hpp" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="transfer\ActionTransfer.h" />
+    <ClInclude Include="transfer\AppTransfer.h" />
+    <ClInclude Include="transfer\BrowserHostTransfer.h" />
+    <ClInclude Include="transfer\BrowserTransfer.h" />
+    <ClInclude Include="transfer\BrowserTransferMgr.h" />
+    <ClInclude Include="transfer\BrowserWindowTransfer.h" />
+    <ClInclude Include="transfer\ClassTransfer.hpp" />
+    <ClInclude Include="transfer\ClipboardTransfer.h" />
+    <ClInclude Include="transfer\CommandLineTransfer.h" />
+    <ClInclude Include="transfer\ControlTransfer.h" />
+    <ClInclude Include="transfer\DesktopTransfer.h" />
+    <ClInclude Include="transfer\DialogTransfer.h" />
+    <ClInclude Include="transfer\DownloaderTransfer.h" />
+    <ClInclude Include="transfer\EventTransfer.h" />
+    <ClInclude Include="transfer\FrameTransfer.h" />
+    <ClInclude Include="transfer\FunctionWrapper.hpp" />
+    <ClInclude Include="transfer\GlobalShortcutTransfer.h" />
+    <ClInclude Include="transfer\IPCTransfer.h" />
+    <ClInclude Include="transfer\KeyboardTransfer.h" />
+    <ClInclude Include="transfer\MenuTransfer.h" />
+    <ClInclude Include="transfer\MouseTransfer.h" />
+    <ClInclude Include="transfer\NativeWindowTransfer.h" />
+    <ClInclude Include="transfer\NetTransfer.h" />
+    <ClInclude Include="transfer\RendererThreadTransfer.h" />
+    <ClInclude Include="transfer\RendererTransferMgr.h" />
+    <ClInclude Include="transfer\RequestTransfer.h" />
+    <ClInclude Include="transfer\RunnableTransfer.hpp" />
+    <ClInclude Include="transfer\ShellTransfer.h" />
+    <ClInclude Include="transfer\SplashTransfer.h" />
+    <ClInclude Include="transfer\SystemInfo.h" />
+    <ClInclude Include="transfer\SystemTransfer.h" />
+    <ClInclude Include="transfer\ThreadTransfer.hpp" />
+    <ClInclude Include="transfer\Transfer.hpp" />
+    <ClInclude Include="transfer\TransferEventEmitter.hpp" />
+    <ClInclude Include="transfer\TransferEventInfo.hpp" />
+    <ClInclude Include="transfer\TransferHelper.hpp" />
+    <ClInclude Include="transfer\TransferMapping.hpp" />
+    <ClInclude Include="transfer\TransferMappingMgr.hpp" />
+    <ClInclude Include="transfer\TransferMgr.h" />
+    <ClInclude Include="transfer\TrayTransfer.h" />
+    <ClInclude Include="transfer\UIThreadTransfer.h" />
+    <ClInclude Include="transfer\URLRequestClientTransfer.h" />
+    <ClInclude Include="transfer\URLRequestTransfer.h" />
+    <ClInclude Include="ui\win\ActionPreprocessor.h" />
+    <ClInclude Include="ui\win\Bitmap.hpp" />
+    <ClInclude Include="ui\win\BrowserWindow.h" />
+    <ClInclude Include="ui\win\BrowserWindowManager.h" />
+    <ClInclude Include="ui\win\BrowserWindowSkin.h" />
+    <ClInclude Include="ui\win\BytesWriteHandler.h" />
+    <ClInclude Include="ui\win\clipboard\Clipboard.h" />
+    <ClInclude Include="ui\win\clipboard\ClipboardMonitor.h" />
+    <ClInclude Include="ui\win\clipboard\ClipWatcher.h" />
+    <ClInclude Include="ui\win\GifEncoder.hpp" />
+    <ClInclude Include="ui\win\Imm32Manager.h" />
+    <ClInclude Include="ui\win\LayeredWindow.h" />
+    <ClInclude Include="ui\win\LocalWindow.h" />
+    <ClInclude Include="ui\win\menu\ContextMenuWindow.h" />
+    <ClInclude Include="ui\win\menu\MenuElementUI.h" />
+    <ClInclude Include="ui\win\menu\MenuUI.h" />
+    <ClInclude Include="ui\win\menu\MenuWindow.h" />
+    <ClInclude Include="ui\win\menu\ObserverImplBase.hpp" />
+    <ClInclude Include="ui\win\MessageWindow.h" />
+    <ClInclude Include="ui\win\NativeWindow.h" />
+    <ClInclude Include="ui\win\NativeWindowProxy.h" />
+    <ClInclude Include="ui\win\OffscreenDragdrop.h" />
+    <ClInclude Include="ui\win\OffscreenDragdropEvents.h" />
+    <ClInclude Include="ui\win\OffScreenRenderView.h" />
+    <ClInclude Include="ui\win\overlap\DefaultOverlapData.hpp" />
+    <ClInclude Include="ui\win\overlap\FilemappingOverlapData.hpp" />
+    <ClInclude Include="ui\win\overlap\Overlap.hpp" />
+    <ClInclude Include="ui\win\overlap\OverlapData.hpp" />
+    <ClInclude Include="ui\win\overlap\PaintResource.hpp" />
+    <ClInclude Include="ui\win\PictureView.h" />
+    <ClInclude Include="ui\win\renderer\D2D1Bitmap.hpp" />
+    <ClInclude Include="ui\win\renderer\D2D1Render.hpp" />
+    <ClInclude Include="ui\win\renderer\D2D1Utility.hpp" />
+    <ClInclude Include="ui\win\renderer\D2D1ViewRenderer.h" />
+    <ClInclude Include="ui\win\renderer\GDIPlusBitmap.hpp" />
+    <ClInclude Include="ui\win\renderer\GdiRenderer.h" />
+    <ClInclude Include="ui\win\RenderView.h" />
+    <ClInclude Include="ui\win\SharedMemory.h" />
+    <ClInclude Include="ui\win\SplashWindow.h" />
+    <ClInclude Include="ui\win\tray\NotifyWindow.h" />
+    <ClInclude Include="ui\win\tray\Tray.h" />
+    <ClInclude Include="ui\win\tray\TrayBase.h" />
+    <ClInclude Include="ui\win\ViewRenderer.h" />
+    <ClInclude Include="ui\win\WebkitView.h" />
+    <ClInclude Include="ui\win\ShadowWindow.h" />
+    <ClInclude Include="ui\win\WinUserMsg.hpp" />
+    <ClInclude Include="utility\libzippp.h" />
+    <ClInclude Include="utility\utility.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\third_party\DuiLib\DuiLib.vcxproj">
+      <Project>{e106acd7-4e53-4aee-942b-d0dd426db34e}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="libNCUI.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="compatibility.manifest" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

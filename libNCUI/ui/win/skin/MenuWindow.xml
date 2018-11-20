@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window  roundcorner="{roundcorner},{roundcorner}" >
+   <Menu name="menu"  itemtextpadding="40,0,40,0" borderround="{roundcorner},{roundcorner}" >{element}</Menu>
+</Window>

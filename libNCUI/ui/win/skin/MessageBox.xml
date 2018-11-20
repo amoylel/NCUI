@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window size="350,155" minsize="350,155" roundcorner="5,5">
+	<Font id="0" name="微软雅黑" size="12" bold="true" />
+    <VerticalLayout name="background" bkcolor="#fffefefe" dragable="true" roundcorner="5,5" >
+        <HorizontalLayout height="40"   bkcolor="{primaryColor}"  bkcolor2="{primaryColor2}">
+            <Label name="caption"  textcolor="#FFFFFFFF" textpadding="10,0,0,0"  align="left" text="提示"/>
+            <Control width="10"/>
+            <Button name="closebtn" tooltip="close" height="40" width="40" normalimage="close.png" hotimage="close_p.png" pushedimage="close_p.png" dragable="false" />
+        </HorizontalLayout>
+        <VerticalLayout name="TextLayout">
+            <HorizontalLayout />
+            <VerticalLayout height="68" padding="58,0,40,0" childpadding="0,0,0,0">
+			  <HorizontalLayout />
+                <Label name="text" font="0" height="32" textcolor="#ff000000"  align="left" />
+				<Edit name="prompt_edit" height="32"  visible="false" bordercolor="{primaryColor}" bordersize="1" focusbordercolor="#ff0a60fe" font="1" dragable="false" />
+				  <HorizontalLayout />
+            </VerticalLayout>
+            <HorizontalLayout />
+            <HorizontalLayout height="32">
+                <Control />  
+				<Button name="okbtn" width="96" height="32" text="ok" align="center"  textcolor="#FFFFFFFF"  bkcolor="{primaryColor}"  dragable="false"  borderround="5,5" /> 
+				<Control width="20"  />
+               	<Button name="cancelbtn" width="96" height="32" text="cancel" align="center" textcolor="{primaryColor}" font="2"  bkcolor="#FFFFFFFF" dragable="false"  bordersize="1" bordercolor="{primaryColor}" inset="1,1,1,1"  borderround="5,5"/>
+                <Control width="" />
+            </HorizontalLayout>
+            <HorizontalLayout height="15" />
+        </VerticalLayout>
+    </VerticalLayout>
+</Window>

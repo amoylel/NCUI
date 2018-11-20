@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\module">
+      <UniqueIdentifier>{29CF2906-7ABF-2D4A-DC05-E4181FCBCECD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\module">
+      <UniqueIdentifier>{29CF2906-7ABF-2D4A-DC05-E4181FCBCECD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\example">
+      <UniqueIdentifier>{C158EDA6-2AAF-C0A0-403F-B38B32F13DFA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\ipc">
+      <UniqueIdentifier>{38610226-4B1E-4F86-5BBF-DB66C466E49B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\handler">
+      <UniqueIdentifier>{BD2654F8-6D52-7752-34BE-2B3329B55B36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..\module">
+      <UniqueIdentifier>{29CF2906-7ABF-2D4A-DC05-E4181FCBCECD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="..">
+      <UniqueIdentifier>{739DB09A-CC57-A953-A6CF-F64FA08E4FA7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="node-gyp">
+      <UniqueIdentifier>{6e1cc842-5bb8-4de8-b779-31f51938e858}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="node-gyp\src">
+      <UniqueIdentifier>{d547fd85-486d-4188-81b6-90f6d504fc2a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\binding.cc">
+      <Filter>..</Filter>
+    </ClCompile>
+    <ClCompile Include="..\module\ConstructorMgr.cpp">
+      <Filter>..\module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dllmain.cpp">
+      <Filter>..</Filter>
+    </ClCompile>
+    <ClCompile Include="..\module\IPCNodeV8Handler.cpp">
+      <Filter>..\module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\example\myobject.cc">
+      <Filter>..\example</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ipc\NodeMessageEmitter.cpp">
+      <Filter>..\ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\handler\NodeProcessHandler.cpp">
+      <Filter>..\handler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\module\NodeTypeConvertor.cpp">
+      <Filter>..\module</Filter>
+    </ClCompile>
+    <ClCompile Include="..\stdafx.cpp">
+      <Filter>..</Filter>
+    </ClCompile>
+    <None Include="..\binding.gyp">
+      <Filter>..</Filter>
+    </None>
+    <ClCompile Include="node-gyp\src\win_delay_load_hook.cc">
+      <Filter>node-gyp\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

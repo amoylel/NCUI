@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>NCUI</title>
+
+		<link href="dist/css/zui.css" rel="stylesheet">
+		<link href="docs/css/doc.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="docs/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="docs/css/flex-layout.css" />
+		<style id="themeStyle"></style>
+
+		<link rel="shortcut icon" href="docs/favicon.ico" type="image/x-icon">
+		<link rel="icon" href="docs/favicon.ico" type="image/x-icon">
+		<script src="dist/lib/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="docs/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="docs/js/Popup.js" type="text/javascript" charset="utf-8"></script>
+		<script src="docs/js/lib/vconsole/vconsole.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="docs/js/vconsole.js" type="text/javascript" charset="utf-8"></script>
+		<script src="docs/js/Tester.js" type="text/javascript" charset="utf-8"></script>
+
+		<style type="text/css">
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			.drag {
+				-webkit-app-region: drag;
+			}
+			
+			.no-drag {
+				-webkit-app-region: no-drag;
+			}
+			
+			body.view-double.compact-mode-in.page-open #page {
+				top: 40px;
+			}
+			
+			#pageBody {
+				top: 10px;
+			}
+			
+			#searchInput{
+				font-size: 14px;
+			}
+			
+			#changeViewWrapper {
+				position: fixed;
+				top: 0px;
+				right: 128px;
+				z-index: 100;
+				display: block;
+			}
+			
+			body.compact-mode.compact-mode-in #grid {
+				margin-top: 0px;
+			}
+			
+			#changeViewBtn {
+				min-width: 32px;
+				padding: 0px;
+				width: 40px;
+				height: 40px;
+				background-color: rgba(0, 0, 0, 0);
+				/*border-color: #fff;*/
+				/*border-color: rgba(0, 0, 0, 0) ;*/
+			}
+			
+			body.view-double.compact-mode-in.page-open #changeViewBtn {
+				color: #FFFFFF;
+			}
+			
+			#__vconsole .vc-switch {
+				background: #3280fc;
+			}
+			
+			#__vconsole.vc-toggle .vc-mask {
+				background: rgba(0, 0, 0, .01) !important;
+				display: block;
+			}
+			
+			#__vconsole .vc-mask {
+				display: none;
+				position: fixed;
+				width: 500px;
+				left: inherit !important;
+				right: 0px;
+				top: 40px;
+				bottom: 0;
+				/*border-left: 1px solid green;*/
+				/*-webkit-box-shadow: #888 0px 0px 5px;*/
+			}
+			
+			#__vconsole .vc-panel {
+				display: none;
+				position: fixed;
+				width: 500px;
+				left: inherit !important;
+				right: 0px;
+				top: 40px;
+				bottom: 0;
+				/*border-left: 1px solid green;*/
+				/*-webkit-box-shadow: #888 0px 0px 5px;*/
+			}
+			
+			#__vconsole .vc-panel {
+				-webkit-box-shadow: #888 0px 0px 5px !important;
+			}
+			
+			#__vconsole .vc-tabbar {
+				border-bottom: 1px solid #d9d9d9;
+				overflow-x: hidden !important;
+				height: inherit !important;
+				width: auto;
+				white-space: nowrap;
+			}
+			
+			.vc-tool {
+				cursor: pointer;
+			}
+			
+			.vc-switch,
+			.vc-toptab,
+			.vc-tab {
+				cursor: pointer;
+			}
+			
+			#__vconsole .vc-logbox .vc-item-info {
+				color: green;
+			}
+			/*.btn-copy-code {
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	width: 28px;
+	height: 28px;
+	padding: 3px 0;
+	line-height: 20px;
+	text-shadow: none;
+	background-color: rgba(255, 255, 255, .5);
+	border-radius: 3px;
+	opacity: 0;
+}
+
+.btn-copy-code>.icon {
+	line-height: 20px;
+}
+
+.btn-copy-code:hover {
+	color: #145ccd;
+	background-color: #fff;
+	border-color: #3280fc;
+}*/
+			
+			.btn-run-code {
+				position: absolute;
+				top: 3px;
+				right: 34px;
+				width: 28px;
+				height: 28px;
+				padding: 3px 0;
+				line-height: 20px;
+				text-shadow: none;
+				background-color: rgba(255, 255, 255, .5);
+				border-radius: 3px;
+				opacity: 0;
+				font-size: 10px;
+				color: #888;
+			}
+			
+			.btn-run-code>.icon {
+				line-height: 20px;
+			}
+			
+			.btn-run-code:hover {
+				color: #145ccd;
+				background-color: #fff;
+				border-color: #3280fc;
+			}
+			
+			pre:hover>.btn-run-code,
+			.copyable:hover>.btn-run-code,
+			.copyable.fixed-run-btn>.btn-copy-code {
+				opacity: 1;
+			}
+			
+			#pageReloadBtn {
+				display: none !important;
+				color: #3280fc;
+			}
+			
+			#pageCloseBtn {
+				color: #3280fc;
+				display: inherit !important;
+			}
+			
+			#pageTestBtn {
+				position: absolute;
+				top: 5px;
+				right: 55px;
+				display: inherit;
+				width: 48px;
+				height: 48px;
+				color: #3280fc;
+			}
+		</style>
+	</head>
+
+	<body class="">
+		<div class="header drag bg-primary" style="z-index: 100;">
+			<div class="flex-row">
+
+				<div class="flex-column flex-top" style="height: 100%;">
+
+					<a href="" class="navbar-brand no-drag hidden"><i class="icon icon-home" style="font-size: 20px; color: white;"></i></a>
+					<div id="search">
+						<div id="searchForm">
+							<input type="text" class="form-control input-lg no-drag" id="searchInput" placeholder="基础, BrowserWindow, Menu..." />
+							<i class="icon icon-search"></i>
+							<button id="searchHelpBtn" type="button" class="btn btn-link no-drag"><i class="icon icon-question"></i></button>
+						</div>
+					</div>
+
+					<div class="flex-item-6 flex-right " style="width: 128px;">
+						<div data-placement="left" title="切换界面布局" data-toggle="tooltip" id="changeViewWrapper">
+							<button type="button" class="btn btn-primary no-drag" id="changeViewBtn" data-toggle="modal" data-target="#changeViewModal"><i class="icon icon-columns"></i></button>
+						</div>
+
+						<input type="button" class="minbtn no-drag" />
+						<input type="button" class="maxbtn no-drag" />
+						<input type="button" class="restorebtn no-drag hidden" />
+						<input type="button" class="closebtn no-drag" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 新开子页面 -->
+		<div id="page">
+			<div id="pageHeader" class="" style="background: none;">
+				<div class="wrapper container no-drag" style="max-width: none; margin: 0;">
+					<i class="icon icon-star"></i>
+					<h2><a class="name" href="###">图标</a></h2>
+					<button type="button" class="btn btn-link no-drag" id="pageTogger" title="折叠/展开 章节" data-toggle="tooltip"></button>
+					<button data-toggle="tooltip" title="刷新" type="button" class="btn btn-link no-drag" id="pageReloadBtn"><i class="icon-repeat"></i></button>
+					<button data-toggle="tooltip" title="运行所有示例" type="button" class="btn btn-link no-drag" id="pageTestBtn"><i class="icon-play-sign"></i></button>
+					<button data-toggle="tooltip" title="关闭（ESC）" type="button" class="btn btn-link path-close-btn path-btn no-drag" id="pageCloseBtn"><i class="path-1"></i></button>
+				</div>
+			</div>
+			<div id="pageBody" class="scrollbar-hover" style="top: 60px;">
+				<div class="loader" id="pageLoader">
+					<i class="icon icon-spin icon-spinner-indicator"></i>
+					<span class="loading-text">加载中...</span>
+					<!--<span class="error-text">加载失败，请检查网络重试。<br>另一个导致无法加载文档的原因可能是该文档尚未完成。<br>
+					欢迎你在 <a href="https://github.com/easysoft/zui">Github</a> 上 <a href="https://github.com/easysoft/zui/fork">Fork</a> 项目来完善文档。
+					</span>-->
+				</div>
+				<div class="container">
+					<div id="pageContent"></div>
+					<nav></nav>
+				</div>
+			</div>
+		</div>
+
+		<!-- 远程内容加载图标 -->
+		<div class="text-muted loader loading"><i class="icon icon-spin icon-spinner-indicator"></i> 加载中...</div>
+
+		<!-- 内容目录 -->
+		<div id="grid" class="scrollbar-hover" style="position: absolute;top: 40px;bottom: 0px;left: 0px;right: 0px; overflow: scroll;">
+			<div class="container">
+				<div class="row">
+					<div class="col col-md-d5 col-sm-6">
+	<div class="chapter" id="chapter-basic" data-id="basic">
+		<div class="chapter-heading fade scale show">
+			<h4><i class="icon icon-magic"></i> <span class='name'>基础</span></h4>
+		</div>
+		<div class="chapter-body" id="sections-basic">
+		</div>
+	</div>
+</div>
+<div class="col col-md-d5 col-sm-6">
+	<div class="chapter" id="chapter-settings" data-id="settings">
+		<div class="chapter-heading fade scale show">
+			<h4><i class="icon icon-magic"></i> <span class='name'>参数设置</span></h4>
+		</div>
+		<div class="chapter-body" id="sections-settings">
+		</div>
+	</div>
+</div>
+<div class="col col-md-d5 col-sm-6">
+	<div class="chapter" id="chapter-api" data-id="api">
+		<div class="chapter-heading fade scale show">
+			<h4><i class="icon icon-magic"></i> <span class='name'>内置接口</span></h4>
+		</div>
+		<div class="chapter-body" id="sections-api">
+		</div>
+	</div>
+</div>
+<div class="col col-md-d5 col-sm-6">
+	<div class="chapter" id="chapter-extend" data-id="extend">
+		<div class="chapter-heading fade scale show">
+			<h4><i class="icon icon-magic"></i> <span class='name'>扩展接口</span></h4>
+		</div>
+		<div class="chapter-body" id="sections-extend">
+		</div>
+	</div>
+</div>
+<div class="col col-md-d5 col-sm-6">
+	<div class="chapter" id="chapter-cef" data-id="cef">
+		<div class="chapter-heading fade scale show">
+			<h4><i class="icon icon-magic"></i> <span class='name'>cef</span></h4>
+		</div>
+		<div class="chapter-body" id="sections-cef">
+		</div>
+	</div>
+</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- 一些html模板代码片段 -->
+		<div class="template">
+			<div class="card section fade scale slide-in-up-100 slide-in-right-50" id="sectionTemplate">
+				<div class="card-heading">
+					<i class="icon"></i>
+					<h5><a class="name" href="###"></a></h5>
+				</div>
+				<div class="card-content">
+					<ul class="topics">
+					</ul>
+				</div>
+			</div>
+			<div class="card-content section-preview icon-preview" id="iconPreviewTemplate">
+				<div class="icons"><i class="icon icon-10x"></i><i class="icon icon-5x"></i><i class="icon icon-2x"></i><i class="icon"></i></div>
+				<h3><small><i class="icon "></i></small> <span class="name color-accent"></span>  <small>Unicode: \<span class="unicode">f3dd</span><span class="alias"> · 别名：<span class="alias-values"></span></span></small></h3>
+				<pre class="copyable"><code><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">&quot;icon <em class="name"></em>&quot;</span><span class="tag">&gt;&lt;/i&gt;</span></code></pre>
+			</div>
+			<button id="runCodeBtn" data-html="true" data-animation="false" data-toggle="tooltip" data-title="运行代码" type="button" class="btn btn-run-code" data-tip-id="runCodeTip" data-container="body"><i class="icon icon-play"></i></button>
+			<button id="copyCodeBtn" data-html="true" data-animation="false" data-toggle="tooltip" data-title="复制代码" type="button" class="btn btn-copy-code" data-tip-id="copyCodeTip" data-container="body"><i class="icon icon-copy"></i></button>
+		</div>
+
+		<!-- 视图切换对话框 -->
+		<div class="modal fade" id="changeViewModal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">关闭</span></button>
+						<h4 class="modal-title">你想用哪种布局展示页面？</h4>
+					</div>
+					<div class="modal-body">
+						<div class="view-options">
+							<a class="view-option view-option-single">
+								<div class="view-shape">
+									<div class="s-1"></div>
+								</div>
+								<div class="title strong">单页面</div>
+								<p class="text-muted">页面在页面中间显示，并隐藏目录。</p>
+							</a>
+							<a class="view-option view-option-double">
+								<div class="view-shape">
+									<div class="s-1"></div>
+								</div>
+								<div class="title strong">双栏</div>
+								<p class="text-muted">目录在左侧显示，页面在右侧显示，更好的利用宽屏空间。</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+		<script src="dist/lib/jquery/jquery.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- ZUI Javascript组件 -->
+		<script src="dist/js/zui.js"></script>
+		<script src="docs/js/doc.js"></script>
+
+		<!-- 增强文档插件 -->
+		<script async src="dist/lib/prettify/prettify.js"></script>
+
+		<script type="text/javascript">
+			var initRunnable = function() {
+				if(!$.zui.browser.isIE() || $.zui.browser.ie > 8) {
+					$runCodeBtn = $('#runCodeBtn');
+					//
+					$runCodeBtn.on('hide.zui.tooltip', function() {
+						$('#runCodeTip').removeClass('tooltip-success tooltip-warning');
+					});
+
+					$runCodeBtn.on('click', function() {
+						$('#runCodeTip').removeClass('tooltip-success tooltip-warning');
+						var elementID = $runCodeBtn.attr('data-clipboard-target');
+						var strFuncName = $(elementID).parents('article').find('.adoc').attr('id');
+						if(!strFuncName) strFuncName = '';
+						strFuncName = strFuncName.replace('div_', '');
+						var src = $(elementID).find('span').html();
+						window.assertArr = src.match(/console.assert\(.+?\);/g);
+						window.assertFuncName = strFuncName;
+
+						if(!window.assertArr) window.assertArr = [];
+						if(!window.assertFuncName) window.assertFuncName = '';
+
+						var js = `(function(){` + src + `})();`;
+						eval(js);
+					});
+
+					$(document).on('mouseenter', 'pre.prettyprint, .copyable', function() {
+						var $copyable = $(this);
+						var $copyableTarget = $copyable.children('code, .linenums, .copyable-target');
+						if(!$copyableTarget.length) return;
+
+						if(!$copyableTarget.attr('id')) {
+							$copyableTarget.attr('id', 'code-' + $.zui.uuid())
+						}
+						$copyable.prepend($runCodeBtn);
+						$runCodeBtn.attr('data-clipboard-target', '#' + $copyableTarget.attr('id'));
+						$copyable.one('mouseleave', function() {
+							$runCodeBtn.detach();
+						});
+					});
+				}
+
+			};
+
+			$(function() { 
+				initRunnable(); 
+				include('app');
+				window.vConsole = new VConsole(); 
+				$(document).on('click', function() { 
+					var targetName = $(event.target).prop("tagName");
+					var len = $(event.target).parents('#__vconsole').length; 
+					if(len == 0) {
+						if(targetName != 'INPUT' && targetName != 'BUTTON' && targetName != 'I') {
+							vConsole.hide();
+						}
+					}
+				});
+
+				$('.btn-run-code').on('click', function() {
+					//vConsole.show(); 
+				})
+
+				$(window).on('beforeunload', function() {
+					return '确定退出程序?'; 
+				});
+
+				$('#pageTestBtn').on('click', function() {
+
+					vConsole.show();
+					var tester = new Tester();
+					tester.run();
+				})
+			});
+		</script>
+
+	</body>
+
+</html>

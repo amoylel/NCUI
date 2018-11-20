@@ -1,0 +1,4 @@
+<MenuElement borderround="3,3" text="{text}" string="{string}" id="{id}" action="{action}" enabled="{enabled}" visible="{visible}" shortcut="{shortcut}">
+	{misc}
+	{children}
+</MenuElement>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Window size="{width},{height}" mininfo="{width},{height}" maxinfo="{width},{height}" sizebox="0,0,0,0" roundcorner="0,0" >
+    <HorizontalLayout bkcolor="#00ffffff"  dragable="false" borderround="0,0" >
+		 <PictureView name="pictureView" bkcolor="#00ffffff" dragable="false" ></PictureView>
+    </HorizontalLayout>
+</Window>

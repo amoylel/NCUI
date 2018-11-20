@@ -1,0 +1,13 @@
+boost 编译命令
+bjam --toolset=msvc-12.0
+bjam --toolset=msvc-12.0 link=static runtime-link=static threading=multi debug release  
+bjam --toolset=msvc-12.0 link=shared runtime-link=shared threading=multi debug release  
+
+bjam --toolset=msvc-14.0
+bjam --toolset=msvc-14.0 link=static runtime-link=static threading=multi debug release  
+bjam --toolset=msvc-14.0 link=shared runtime-link=shared threading=multi debug release  
+
+// 64位
+bjam --toolset=msvc-14.0 address-model=64 
+bjam --toolset=msvc-14.0 link=static runtime-link=static threading=multi debug release  address-model=64 
+bjam --toolset=msvc-14.0 link=shared runtime-link=shared threading=multi debug release  address-model=64 

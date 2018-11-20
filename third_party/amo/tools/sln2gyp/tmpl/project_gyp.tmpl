@@ -1,0 +1,20 @@
+{ 
+'includes': [ 
+    'common.gyp',
+    '{project_name}.gypi', 
+  ],
+  'targets': [
+        {
+            'target_name': '{target_name}',
+            'product_name': '{project_name}',
+            'type': '{type}',
+            'sources': [
+                '<@(source_code_{project_name})',
+            ],
+            'dependencies': [
+                {dependencies}
+            ]
+        },
+    
+    ]
+}

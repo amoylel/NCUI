@@ -1,0 +1,1139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="context">
+      <UniqueIdentifier>{06917a46-ffe8-47ad-b997-0bc5c606f8ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="handler">
+      <UniqueIdentifier>{6a7ad49e-d55c-4b89-8c9c-d3c94086e92d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="node">
+      <UniqueIdentifier>{60f32ff0-a716-42a3-a920-97b12fe2ab87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="transfer">
+      <UniqueIdentifier>{86dedca9-d628-4cb1-bd0a-9a4a95f66169}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui">
+      <UniqueIdentifier>{60b600d0-22c7-47c2-bfac-e542b959090e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="module">
+      <UniqueIdentifier>{aff4d21b-6476-4a5c-9b44-3bbec52eb399}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="module\basic">
+      <UniqueIdentifier>{bc193f04-bb71-4107-be1a-cf93dfd1d59f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui\win">
+      <UniqueIdentifier>{9f0372a1-cd5f-4c7e-a446-09561c11c129}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui\win\menu">
+      <UniqueIdentifier>{46d4dc86-d9f8-4ad8-b114-ac932b2ef8a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui\win\tray">
+      <UniqueIdentifier>{eccec72f-620f-460a-91e9-851fac076ef1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="module\dll">
+      <UniqueIdentifier>{2e8e4b69-d415-4955-8a68-ccf1ec1fe451}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="settings">
+      <UniqueIdentifier>{d27e4ea7-cea5-464a-aebe-3786d0ca90bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cefsimple">
+      <UniqueIdentifier>{6e8dc24e-e0b4-4272-b623-cf370b46eaae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui\win\clipboard">
+      <UniqueIdentifier>{7bef711a-4abf-4070-ae10-1d954963c93a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{3b2b4b45-4ce9-4c99-9703-d4b024894985}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{51268b9a-3d06-4987-aa86-8b3c44d36157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{bc872713-fb0d-49d3-a297-bc5fd76fb3e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{8045ae72-af7f-4ad5-a794-67a3d3d41f73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scheme">
+      <UniqueIdentifier>{08963fad-917a-4535-931e-e1fa31276293}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ipc">
+      <UniqueIdentifier>{1518d5ed-61be-4952-b9e8-93a8eb506dad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="docs">
+      <UniqueIdentifier>{189fc675-3203-4b42-ad9b-e1f6a41bde3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui\win\overlap">
+      <UniqueIdentifier>{ce6474dc-5455-4e2f-a218-a9558d2ba4f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ui\win\renderer">
+      <UniqueIdentifier>{51b80adf-8870-4077-bf8d-76e912eae446}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="handler\patch">
+      <UniqueIdentifier>{bf84c048-3c0b-4bdd-b22f-bb7aa069d671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{a0fa4873-be83-4862-b3e5-72f496b6c448}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="module\transfer">
+      <UniqueIdentifier>{abde3c86-41f2-4196-ac73-ea465ef15a67}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="context\AppContext.cpp">
+      <Filter>context</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\BrowserProcessHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\ClientApp.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\ClientHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\ContextMenuHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\DialogHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\DisplayHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\DownloadHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\DragHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\DummyClientHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\FocusHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\GeolocationHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\JSDialogHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\KeyboardHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\LifeSpanHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\LoadHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\MessageRouterBrowserSide.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\RenderHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\RenderProcessHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\RequestHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\ResourceBundleHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\ResourceHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\URLRequestClient.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\V8ExtentionHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="module\DragWindowV8Handler.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="module\EventEmitterV8Handler.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="module\IPCRendererV8Handler.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="module\JsClassObjectV8Handler.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="module\JsClassV8Handler.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="module\basic\TypeConvertor.cpp">
+      <Filter>module\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="module\basic\V8HandlerManager.cpp">
+      <Filter>module\basic</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\BrowserTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\FrameTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\GlobalShortcutTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\NativeWindowTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\ShellTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\TransferMgr.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\TrayTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\BrowserWindow.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\BrowserWindowManager.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\BrowserWindowSkin.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\BytesWriteHandler.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\Imm32Manager.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\LayeredWindow.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\MessageWindow.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\NativeWindow.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\OffscreenDragdrop.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\OffScreenRenderView.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\RenderView.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\ViewRenderer.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\WebkitView.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\menu\MenuElementUI.cpp">
+      <Filter>ui\win\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\menu\MenuUI.cpp">
+      <Filter>ui\win\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\menu\MenuWindow.cpp">
+      <Filter>ui\win\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\tray\NotifyWindow.cpp">
+      <Filter>ui\win\tray</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\tray\Tray.cpp">
+      <Filter>ui\win\tray</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeMessageHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeLifeSpanHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeHandlerHelper.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeLoadHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeContextMenuHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeDisplayHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeDialogHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeDownloadHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeDragHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeFocusHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeGeolocationHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeJSDialogHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeKeyboardHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeRenderHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="node\NodeRequestHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\CommandLineTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\BrowserHostTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\URLRequestTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\URLRequestClientTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\RequestTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="module\dll\DllManager.cpp">
+      <Filter>module\dll</Filter>
+    </ClCompile>
+    <ClCompile Include="module\dll\DllRunner.cpp">
+      <Filter>module\dll</Filter>
+    </ClCompile>
+    <ClCompile Include="module\dll\DllV8Handler.cpp">
+      <Filter>module\dll</Filter>
+    </ClCompile>
+    <ClCompile Include="module\dll\DllValueHandler.cpp">
+      <Filter>module\dll</Filter>
+    </ClCompile>
+    <ClCompile Include="module\dll\JsTypeMapHandler.cpp">
+      <Filter>module\dll</Filter>
+    </ClCompile>
+    <ClCompile Include="module\dll\TypeMapManager.cpp">
+      <Filter>module\dll</Filter>
+    </ClCompile>
+    <ClCompile Include="node\CefCallbackHandler.cpp">
+      <Filter>node</Filter>
+    </ClCompile>
+    <ClCompile Include="module\JSV8Handler.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\NativeWindowProxy.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="settings\NativeWindowSettings.cpp">
+      <Filter>settings</Filter>
+    </ClCompile>
+    <ClCompile Include="settings\AppSettings.cpp">
+      <Filter>settings</Filter>
+    </ClCompile>
+    <ClCompile Include="settings\BrowserWindowSettings.cpp">
+      <Filter>settings</Filter>
+    </ClCompile>
+    <ClCompile Include="settings\MenuWindowSettings.cpp">
+      <Filter>settings</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\AppTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\BrowserWindowTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\menu\ContextMenuWindow.cpp">
+      <Filter>ui\win\menu</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\clipboard\Clipboard.cpp">
+      <Filter>ui\win\clipboard</Filter>
+    </ClCompile>
+    <ClCompile Include="settings\GlobalShortcutSettings.cpp">
+      <Filter>settings</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\ActionPreprocessor.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\LocalWindow.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="settings\BasicSettings.cpp">
+      <Filter>settings</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\EventTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\ControlTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="module\ConstantAttributeV8Handler.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\IPCTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\DialogTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\ShadowWindow.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\NetTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="settings\DowloaderSettings.cpp">
+      <Filter>settings</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\DownloaderTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="settings\RequestSettings.cpp">
+      <Filter>settings</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\SystemTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\MouseTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\KeyboardTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\DesktopTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\MenuTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\SharedMemory.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\SystemInfo.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\tray\TrayBase.cpp">
+      <Filter>ui\win\tray</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\SplashWindow.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\SplashTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\PictureView.cpp">
+      <Filter>ui\win</Filter>
+    </ClCompile>
+    <ClCompile Include="settings\SplashWindowSettings.cpp">
+      <Filter>settings</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libNCUI.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\UtilityV8Handler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\UIThreadTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\RendererThreadTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="scheme\LocalSchemeHandler.cpp">
+      <Filter>scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="scheme\NativeFileHandler.cpp">
+      <Filter>scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="scheme\ZipFileHandler.cpp">
+      <Filter>scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="scheme\UrlResourceHandlerFactory.cpp">
+      <Filter>scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="utility\libzippp.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\BrowserTransferMgr.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\RendererTransferMgr.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="scheme\DllFileManager.cpp">
+      <Filter>scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="scheme\DllFileHandler.cpp">
+      <Filter>scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\ActionTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="settings\OverlapSettings.cpp">
+      <Filter>settings</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\renderer\GdiRenderer.cpp">
+      <Filter>ui\win\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\renderer\D2D1ViewRenderer.cpp">
+      <Filter>ui\win\renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="scheme\ZipFileManger.cpp">
+      <Filter>scheme</Filter>
+    </ClCompile>
+    <ClCompile Include="module\AppExHandler.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="cefsimple\cefsimple_win.cc">
+      <Filter>cefsimple</Filter>
+    </ClCompile>
+    <ClCompile Include="cefsimple\simple_app.cc">
+      <Filter>cefsimple</Filter>
+    </ClCompile>
+    <ClCompile Include="cefsimple\simple_handler.cc">
+      <Filter>cefsimple</Filter>
+    </ClCompile>
+    <ClCompile Include="cefsimple\simple_handler_win.cc">
+      <Filter>cefsimple</Filter>
+    </ClCompile>
+    <ClCompile Include="transfer\ClipboardTransfer.cpp">
+      <Filter>transfer</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\clipboard\ClipWatcher.cpp">
+      <Filter>ui\win\clipboard</Filter>
+    </ClCompile>
+    <ClCompile Include="ui\win\clipboard\ClipboardMonitor.cpp">
+      <Filter>ui\win\clipboard</Filter>
+    </ClCompile>
+    <ClCompile Include="module\transfer\BigStringTransfer.cpp">
+      <Filter>module\transfer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="context\AppContext.h">
+      <Filter>context</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\BrowserManager.hpp">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\BrowserProcessHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\CefHeader.hpp">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\CefProcessExchanger.hpp">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\ClientApp.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\ClientHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\ContextMenuHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\DialogHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\DisplayHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\DownloadHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\DragHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\DummyClientHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\FocusHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\GeolocationHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\HandlerDelegate.hpp">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\JSDialogHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\KeyboardHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\LifeSpanHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\LoadHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\MessageHandlerDelegate.hpp">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\MessageRouterBrowserSide.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\RenderHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\RenderProcessHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\RequestHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\ResourceBundleHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\ResourceHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\RunFileDialogCallback.hpp">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\URLRequestClient.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\V8ExtentionHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="module\DragWindowV8Handler.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="module\EventEmitterV8Handler.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="module\IPCRendererV8Handler.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="module\JsClassObjectV8Handler.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="module\JsClassV8Handler.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="module\JSV8Handler.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="module\basic\EventFunctionManager.h">
+      <Filter>module\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="module\basic\TypeConvertor.h">
+      <Filter>module\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="module\basic\V8HandlerManager.h">
+      <Filter>module\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\BrowserTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\ClassTransfer.hpp">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\FrameTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\GlobalShortcutTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\NativeWindowTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\ShellTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\Transfer.hpp">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\TransferMapping.hpp">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\TransferMappingMgr.hpp">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\TransferMgr.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\TrayTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\BrowserWindow.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\BrowserWindowManager.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\BrowserWindowSkin.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\BytesWriteHandler.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\Imm32Manager.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\LayeredWindow.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\MessageWindow.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\NativeWindow.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\OffscreenDragdrop.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\OffscreenDragdropEvents.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\OffScreenRenderView.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\RenderView.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\ViewRenderer.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\WebkitView.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\menu\MenuElementUI.h">
+      <Filter>ui\win\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\menu\MenuUI.h">
+      <Filter>ui\win\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\menu\MenuWindow.h">
+      <Filter>ui\win\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\tray\NotifyWindow.h">
+      <Filter>ui\win\tray</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\tray\Tray.h">
+      <Filter>ui\win\tray</Filter>
+    </ClInclude>
+    <ClInclude Include="module\basic\ClassMethodMgr.hpp">
+      <Filter>module\basic</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeMessageHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeLifeSpanHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeHandlerHelper.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeLoadHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeContextMenuHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeDialogHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeDisplayHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeDownloadHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeDragHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeFocusHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeGeolocationHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeJSDialogHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeKeyboardHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeRenderHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="node\NodeRequestHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\BrowserHostTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\CommandLineTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\URLRequestTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\URLRequestClientTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\RequestTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="module\dll\DllManager.h">
+      <Filter>module\dll</Filter>
+    </ClInclude>
+    <ClInclude Include="module\dll\DllRunner.h">
+      <Filter>module\dll</Filter>
+    </ClInclude>
+    <ClInclude Include="module\dll\DllV8Handler.h">
+      <Filter>module\dll</Filter>
+    </ClInclude>
+    <ClInclude Include="module\dll\DllValueAccessor.h">
+      <Filter>module\dll</Filter>
+    </ClInclude>
+    <ClInclude Include="module\dll\DllValueHandler.h">
+      <Filter>module\dll</Filter>
+    </ClInclude>
+    <ClInclude Include="module\dll\JsTypeMapHandler.h">
+      <Filter>module\dll</Filter>
+    </ClInclude>
+    <ClInclude Include="module\dll\TypeMapManager.h">
+      <Filter>module\dll</Filter>
+    </ClInclude>
+    <ClInclude Include="node\CefCallbackHandler.h">
+      <Filter>node</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\NativeWindowProxy.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="settings\NativeWindowSettings.h">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="settings\MenuWindowSettings.h">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="settings\AppSettings.h">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="settings\BrowserWindowSettings.h">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\FunctionWrapper.hpp">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\AppTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\BrowserWindowTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="ipc\Any.hpp">
+      <Filter>ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ipc\AsyncFunctionManager.hpp">
+      <Filter>ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ipc\IPCMessage.hpp">
+      <Filter>ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ipc\MessageLauncher.hpp">
+      <Filter>ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ipc\ProcessExchanger.hpp">
+      <Filter>ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ipc\RenderMessageEmitter.hpp">
+      <Filter>ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ipc\UIMessageBroadcaster.hpp">
+      <Filter>ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ipc\UIMessageEmitter.hpp">
+      <Filter>ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\menu\ObserverImplBase.hpp">
+      <Filter>ui\win\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\menu\ContextMenuWindow.h">
+      <Filter>ui\win\menu</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\clipboard\Clipboard.h">
+      <Filter>ui\win\clipboard</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\utility.hpp">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="settings\GlobalShortcutSettings.h">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\ActionPreprocessor.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="settings\BasicSettings.h">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\LocalWindow.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\EventTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\ControlTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="module\ConstantAttributeV8Handler.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\IPCTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\DialogTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\ShadowWindow.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\NetTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\DownloaderTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="settings\DowloaderSettings.h">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="settings\RequestSettings.h">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\DesktopTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\SystemTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\MouseTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\KeyboardTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\SystemInfo.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\MenuTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\SharedMemory.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\tray\TrayBase.h">
+      <Filter>ui\win\tray</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\SplashTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\SplashWindow.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="settings\SplashWindowSettings.h">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\PictureView.h">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="libNCUI.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\UtilityV8Handler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\ThreadTransfer.hpp">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\RendererThreadTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\UIThreadTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\TransferEventInfo.hpp">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\RunnableTransfer.hpp">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\TransferEventEmitter.hpp">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="scheme\LocalSchemeHandler.h">
+      <Filter>scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="scheme\NativeFileHandler.h">
+      <Filter>scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="scheme\ZipFileHandler.h">
+      <Filter>scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="scheme\UrlResourceHandlerFactory.h">
+      <Filter>scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="utility\libzippp.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="ipc\IPCEmitter.hpp">
+      <Filter>ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\BrowserTransferMgr.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\RendererTransferMgr.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="scheme\DllFileManager.h">
+      <Filter>scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="scheme\DllFileHandler.h">
+      <Filter>scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\ActionTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="docs\QuickStart.hpp">
+      <Filter>docs</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="docs\AdvancedUsage.hpp">
+      <Filter>docs</Filter>
+    </ClInclude>
+    <ClInclude Include="docs\Demos.hpp">
+      <Filter>docs</Filter>
+    </ClInclude>
+    <ClInclude Include="docs\AppGen.hpp">
+      <Filter>docs</Filter>
+    </ClInclude>
+    <ClInclude Include="docs\UseNodeJs.hpp">
+      <Filter>docs</Filter>
+    </ClInclude>
+    <ClInclude Include="docs\DispatchEvent.hpp">
+      <Filter>docs</Filter>
+    </ClInclude>
+    <ClInclude Include="settings\OverlapSettings.h">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\overlap\Overlap.hpp">
+      <Filter>ui\win\overlap</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\overlap\PaintResource.hpp">
+      <Filter>ui\win\overlap</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\overlap\OverlapData.hpp">
+      <Filter>ui\win\overlap</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\overlap\DefaultOverlapData.hpp">
+      <Filter>ui\win\overlap</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\renderer\GdiRenderer.h">
+      <Filter>ui\win\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\overlap\FilemappingOverlapData.hpp">
+      <Filter>ui\win\overlap</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\renderer\D2D1Bitmap.hpp">
+      <Filter>ui\win\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\renderer\D2D1Utility.hpp">
+      <Filter>ui\win\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\renderer\D2D1Render.hpp">
+      <Filter>ui\win\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\renderer\GDIPlusBitmap.hpp">
+      <Filter>ui\win\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\TransferHelper.hpp">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\Bitmap.hpp">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\GifEncoder.hpp">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\renderer\D2D1ViewRenderer.h">
+      <Filter>ui\win\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\WinUserMsg.hpp">
+      <Filter>ui\win</Filter>
+    </ClInclude>
+    <ClInclude Include="scheme\ZipFileManager.h">
+      <Filter>scheme</Filter>
+    </ClInclude>
+    <ClInclude Include="module\AppExHandler.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="cefsimple\simple_app.h">
+      <Filter>cefsimple</Filter>
+    </ClInclude>
+    <ClInclude Include="cefsimple\simple_handler.h">
+      <Filter>cefsimple</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\patch\cef_geolocation_handler.h">
+      <Filter>handler\patch</Filter>
+    </ClInclude>
+    <ClInclude Include="settings\ThemeSettings.hpp">
+      <Filter>settings</Filter>
+    </ClInclude>
+    <ClInclude Include="include\version.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\ClipboardTransfer.h">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\clipboard\ClipWatcher.h">
+      <Filter>ui\win\clipboard</Filter>
+    </ClInclude>
+    <ClInclude Include="ui\win\clipboard\ClipboardMonitor.h">
+      <Filter>ui\win\clipboard</Filter>
+    </ClInclude>
+    <ClInclude Include="ipc\BlobManager.hpp">
+      <Filter>ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="module\transfer\BigStringTransfer.h">
+      <Filter>module\transfer</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="libNCUI.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="compatibility.manifest" />
+  </ItemGroup>
+</Project>

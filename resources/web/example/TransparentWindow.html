@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset='utf-8'>
+		<script type="text/javascript">
+			includes('BrowserWindow', 'ipc');
+		</script>
+		<style>
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				background: none;
+			}
+			
+			.container {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: none;
+			}
+			
+			.drag {
+				-webkit-app-region: drag;
+			}
+			
+			.no-drag {
+				-webkit-app-region: no-drag;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="container  ">
+			<h1 class="no-drag">我是一个透明的无边框窗口，<p class="drag" style="background: #007bff; color: white;display: inline;">可以按住我可以移动窗口</p><a  style="background: white;"href="#" onclick="BrowserWindow.currentWindow.close()">点我关闭</a></h1>
+		</div>
+	</body>
+	<script type="text/javascript">
+		ipc.unique('NCUI.TEST3', function() {
+			console.log(arguments);
+		});
+
+		document.addEventListener('NCUI.TEST3', function(event) {
+			console.log(arguments);
+		});
+
+		document.dispatchEvent(new CustomEvent('ipc.exec', {
+			detail: {
+				eventName: 'NCUI.TEST2',
+				value: 3232
+			}
+		}));
+
+		document.dispatchEvent(new CustomEvent('ipc.dispatchEvent', {
+			detail: {
+				eventName: 'NCUI.TEST3',
+				value: 3232,
+				path: 'D:/'
+			}
+		}));
+	</script>
+
+</html>

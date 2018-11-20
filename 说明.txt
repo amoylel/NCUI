@@ -1,0 +1,6 @@
+﻿如果要支持XP 需要完成以下操作
+1. 关闭日志功能，当前使用的spdlog 不支持XP amo::log::initialize(false, false);(已通过修代码支持XP)
+2. 修改NCUI.exe项目的清单文件，去掉$(ProjectDir)compatibility.manifest 
+
+
+$(ProjectDir)$(ProjectName).exe.manifest的作用，好像是可以打开调试窗口使用 -->调试功能

@@ -1,0 +1,32 @@
+1. 本程序依赖 boost1.63及以上版本
+2. XP下不支持d2d1硬件加速，如果要编译xp版本 需要为libNCUI项目 定义宏 NCUI_NO_D2D1
+3. 程序需要win10sdk支持
+4. 本程序使用vs2015 update3 编译通过,VC2017没有试用，VS2013及以下版本肯定编译不过
+5. 如果需要nodejs 请查看nodejs编译说明
+6. 修改Microsoft.Cpp.Common.user.props 
+		<LibraryFolder >$(SolutionDir)../$(SolutionName)-Library\</LibraryFolder>   				// cef 目录及node目录			
+		<BoostFolder>$(SDKFolder)boost_1_63_0\</BoostFolder>										// boost 目录
+		<NodeGypFolder>$(LibraryFolder)node-v4.7.1/</NodeGypFolder>									// node插件目录， 编译noder插件时需要
+		<LibCefFolder>$(LibraryFolder)cef_binary_3.2526.1373.gb660893_windows32/</LibCefFolder>		// cef目录
+
+		
+使用脚本 init.py 辅助构建cef 和node
+python init.py 如果不带任何参数，将使用默认的CEF和NodeJs版本，NCUI-Library目录下的压缩包会被解压到<LibraryFolder>目录下
+init.py 参数说明 
+
+--cef cef版本 		如： --cef 2526
+--node node 版本 	如： --node 4.7.1 
+--rebuild 重新编译（cef/node）项目
+--switch 只切换node或cef的版本号，前提是<LibraryFolder>目录下已经存在相应的版本
+
+一个常用的参数如下：
+python init.py --cef 2526 --node 4.7.1  --switch
+python init.py --cef 3440 --node 8x
+
+脚本支持的cef/node的版本号可以查看node_cef_util.py 中的源代码，其中cef2704以下版本的url不可访问，为能通过对应的url下载到相应的cef，你可以自己下载后放到NCUI-downloads目录下
+执行该脚本后的目录结构如下：
+|
+|--NCUI
+|--NCUI-Downloads
+|--NCUI-Library
+|--NCUI-Out

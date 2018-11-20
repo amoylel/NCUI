@@ -1,0 +1,14 @@
+{
+    "sln": "amo.sln",
+    "exclude_projects":[ 
+		"amo",
+		"file2c",
+		"filesync",
+		"jsonfmt",
+		"sln2gyp",
+    ],
+    "include_dirs":[
+        "{SolutionDir}"
+    ]
+    
+}

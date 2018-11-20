@@ -1,0 +1,703 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="amo">
+      <UniqueIdentifier>{652c85d8-9741-4dba-944e-07cc7f1c00e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\utility">
+      <UniqueIdentifier>{34612973-573e-4800-8e03-a141d816ab58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\logger">
+      <UniqueIdentifier>{1c614ffa-fadd-4f6b-aa0e-fa98dbb735f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\ipc">
+      <UniqueIdentifier>{c3dcae21-5706-494a-b105-0edde83d1923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\asio">
+      <UniqueIdentifier>{988220c1-8352-4760-88fb-fff73b9f4607}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\asio\tcp">
+      <UniqueIdentifier>{1000f739-19b5-482b-8960-6505c15812e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\asio\udp">
+      <UniqueIdentifier>{3116fc0a-3c37-49fe-b2e4-f9f26d1526e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\asio\http">
+      <UniqueIdentifier>{3218a09c-e4e2-498f-9fcf-875aae54507f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\asio\utility">
+      <UniqueIdentifier>{37f2cb33-228e-4128-86c7-7ec3d6cfdcac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\sln2gyp">
+      <UniqueIdentifier>{bef0c4aa-bd46-44c5-b20b-e332c168fb75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\asio\st_asio_wrapper">
+      <UniqueIdentifier>{6fb2e944-ece0-4c65-bc24-cb809b9052cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\asio\st_asio_wrapper\ext">
+      <UniqueIdentifier>{ceeab716-9d95-42e8-bb10-40033e9af63a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\asio\st_asio_wrapper\tcp">
+      <UniqueIdentifier>{8e97a32f-5318-444b-85da-46b0afc39013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\asio\st_asio_wrapper\udp">
+      <UniqueIdentifier>{ff917575-344f-42c8-89c9-22418f4869f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\asio\st_asio_wrapper\tcp\ssl">
+      <UniqueIdentifier>{70ffd2bd-aed5-4161-9d83-990acb84858c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\win">
+      <UniqueIdentifier>{661e0238-c7bb-47ea-97e5-c47ad49ddfee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\linux">
+      <UniqueIdentifier>{dd04e4c4-049d-4c13-8f91-97ab15515969}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\string">
+      <UniqueIdentifier>{157ac907-5048-4638-9c76-cd1cdab02d79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\impl">
+      <UniqueIdentifier>{7873e540-49f4-4c93-aad7-6c35313db9f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="amo\mqtt">
+      <UniqueIdentifier>{58a12343-f2e6-431d-a1d2-58a6dc7c970d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="amo\functional.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\md5.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\memory.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\network.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\platforms.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\random.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\regex.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\stdint.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\system_error.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\thread.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\time.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\type_traits.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\logger.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\looper_executor.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\exchanger.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\chrono.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\launch.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\base64.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\uuid.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\array.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\uid.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\timer.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\tribool.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\string_builder.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\circular_buffer.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\config.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\utility.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\sigsolt.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\format.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\template_macro.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\delegate.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\json.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\utility\string.hpp">
+      <Filter>amo\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\pipe.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\object.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\noncopyable.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\singleton.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\variant.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\byte_order.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\byte_buffer.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\unordered_map.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\string.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\unordered_set.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\atomic.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\codecvt.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\future.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\limits.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ratio.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\tuple.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\amo.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\signals2.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\any.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\nil.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\optional.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\path.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\loader.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\text.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\lexical_cast.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\file_mapping.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\directory.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\date_time.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\process.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\registry.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\regular.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\xml.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ascii.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\bimap.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\date.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\dynamic_bitset.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\foreach.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\hash.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\program_options.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\smart_memory_pool.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\smart_ptr.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\system.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\thread_pool.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\sha1.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\bit_converter.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\loader_lite.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\softeware.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\json_helper.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\logger\raw_file_helper.h">
+      <Filter>amo\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\logger\raw_daily_file_sink.h">
+      <Filter>amo\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\app.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\adb.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\shell.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\logger\notify_sink_sinks.h">
+      <Filter>amo\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\adb1031.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\adb1036.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\adb1039.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\filesystem.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\archive.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\utility.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\ipc_emitter.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\process_exchanger.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\any.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\function_wrapper.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\message_launcher.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\transfer_event_emitter.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\transfer_event_info.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\transfer_manager.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\class_transfer.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\ipc_args_pos_info.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\ipc_impl.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\transfer.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\ipc\ipc_transfer.hpp">
+      <Filter>amo\ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\rect.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\File2.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\file.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\filestream.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\windows.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\adb1032.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\utility\unified_out.hpp">
+      <Filter>amo\asio\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\tcp\packer.hpp">
+      <Filter>amo\asio\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\tcp\unpacker.hpp">
+      <Filter>amo\asio\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\udp\udp.hpp">
+      <Filter>amo\asio\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\udp\udp_packer.hpp">
+      <Filter>amo\asio\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\udp\udp_unpacker.hpp">
+      <Filter>amo\asio\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\udp.hpp">
+      <Filter>amo\asio</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\tcp.hpp">
+      <Filter>amo\asio</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\tcp\client.hpp">
+      <Filter>amo\asio\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\http\client_http.hpp">
+      <Filter>amo\asio\http</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\http\client_https.hpp">
+      <Filter>amo\asio\http</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\http\crypto.hpp">
+      <Filter>amo\asio\http</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\http\server_http.hpp">
+      <Filter>amo\asio\http</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\http\server_https.hpp">
+      <Filter>amo\asio\http</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\http\status_code.hpp">
+      <Filter>amo\asio\http</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\http\utility.hpp">
+      <Filter>amo\asio\http</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\http.hpp">
+      <Filter>amo\asio</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\tcp\server.hpp">
+      <Filter>amo\asio\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\test.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\looper_executor_pool.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\tcp\socket.hpp">
+      <Filter>amo\asio\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\tcp\service.hpp">
+      <Filter>amo\asio\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\config.hpp">
+      <Filter>amo\asio</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\filetoc.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\comment.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\sln2gyp.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\sln2gyp\vsproject.hpp">
+      <Filter>amo\sln2gyp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\filesync.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\filewatch_t.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\filewatch.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\task_timer.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\scheduler.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\base.h">
+      <Filter>amo\asio\st_asio_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\config.h">
+      <Filter>amo\asio\st_asio_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\container.h">
+      <Filter>amo\asio\st_asio_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\object.h">
+      <Filter>amo\asio\st_asio_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\object_pool.h">
+      <Filter>amo\asio\st_asio_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\old_class_names.h">
+      <Filter>amo\asio\st_asio_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\service_pump.h">
+      <Filter>amo\asio\st_asio_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\socket.h">
+      <Filter>amo\asio\st_asio_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\socket_service.h">
+      <Filter>amo\asio\st_asio_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\timer.h">
+      <Filter>amo\asio\st_asio_wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\ext\client.h">
+      <Filter>amo\asio\st_asio_wrapper\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\ext\ext.h">
+      <Filter>amo\asio\st_asio_wrapper\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\ext\packer.h">
+      <Filter>amo\asio\st_asio_wrapper\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\ext\server.h">
+      <Filter>amo\asio\st_asio_wrapper\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\ext\ssl.h">
+      <Filter>amo\asio\st_asio_wrapper\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\ext\tcp.h">
+      <Filter>amo\asio\st_asio_wrapper\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\ext\udp.h">
+      <Filter>amo\asio\st_asio_wrapper\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\ext\unpacker.h">
+      <Filter>amo\asio\st_asio_wrapper\ext</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\tcp\alias.h">
+      <Filter>amo\asio\st_asio_wrapper\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\tcp\client.h">
+      <Filter>amo\asio\st_asio_wrapper\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\tcp\client_socket.h">
+      <Filter>amo\asio\st_asio_wrapper\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\tcp\server.h">
+      <Filter>amo\asio\st_asio_wrapper\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\tcp\server_socket.h">
+      <Filter>amo\asio\st_asio_wrapper\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\tcp\socket.h">
+      <Filter>amo\asio\st_asio_wrapper\tcp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\tcp\ssl\alias.h">
+      <Filter>amo\asio\st_asio_wrapper\tcp\ssl</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\tcp\ssl\ssl.h">
+      <Filter>amo\asio\st_asio_wrapper\tcp\ssl</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\udp\alias.h">
+      <Filter>amo\asio\st_asio_wrapper\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\udp\socket.h">
+      <Filter>amo\asio\st_asio_wrapper\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\asio\st_asio_wrapper\udp\socket_service.h">
+      <Filter>amo\asio\st_asio_wrapper\udp</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\mutex.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\jsonfmt.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\thread_safe_container.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\looper_executor_helper.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\logger\console_sinks.h">
+      <Filter>amo\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\shared_memory.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\managed_shared_memory.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\win\process_win.hpp">
+      <Filter>amo\win</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\linux\process_linux.hpp">
+      <Filter>amo\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\win\app_win.hpp">
+      <Filter>amo\win</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\linux\app_linux.hpp">
+      <Filter>amo\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\linux\shell_linux.hpp">
+      <Filter>amo\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\win\shell_win.hpp">
+      <Filter>amo\win</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\daemon.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\linux\file_mapping_linux.hpp">
+      <Filter>amo\linux</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\win\file_mapping_win.hpp">
+      <Filter>amo\win</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\string\iconv.hpp">
+      <Filter>amo\string</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\string\string_utils.hpp">
+      <Filter>amo\string</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\string\tiny_string.hpp">
+      <Filter>amo\string</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\string\basic_string.hpp">
+      <Filter>amo\string</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\string\coding_type.hpp">
+      <Filter>amo\string</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\impl\basic_path.hpp">
+      <Filter>amo\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\impl\basic_directory.hpp">
+      <Filter>amo\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\impl\basic_json.hpp">
+      <Filter>amo\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\impl\basic_json_helper.hpp">
+      <Filter>amo\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\json_object.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\impl\basic_file.hpp">
+      <Filter>amo\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\impl\basic_filestream.hpp">
+      <Filter>amo\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\binary.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\mqtt.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\mqtt\mqtt_client.hpp">
+      <Filter>amo\mqtt</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\blob.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+    <ClInclude Include="amo\bigstr.hpp">
+      <Filter>amo</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+{
+	"output_path": "default_gyp",
+	"name_space": "sln2gyp_tmpl",
+	"is_utf8": false,
+	"header_only": true,
+	"files": [
+		{"name": "COMMON_GYP_TEMPLATE", "path": "common_gyp.tmpl"}, 
+		{"name": "GYPI_TEMPLATE", "path": "gypi.tmpl"},
+        {"name": "SLN_GYP_TEMPLATE", "path": "sln_gyp.tmpl"},
+		{"name": "PROJECT_GYP_TEMPLATE", "path": "project_gyp.tmpl"} 		
+	]
+}

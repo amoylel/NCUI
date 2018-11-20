@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{3b7f2e96-6199-4693-88e7-b5dc5b29fbcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{bd5da145-df67-4ffd-b974-c6f8df9bc3e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nan">
+      <UniqueIdentifier>{7e63c3a9-8c47-44f3-a460-022adb918a10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="module">
+      <UniqueIdentifier>{f6339aaa-f46c-4165-9819-6372c1dc6855}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="handler">
+      <UniqueIdentifier>{28b33e2f-fb65-40bf-b7a2-96b35b2207d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ipc">
+      <UniqueIdentifier>{08a51e5b-ac3a-474c-9366-fa1af13a8d90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="transfer">
+      <UniqueIdentifier>{7bb84a2f-0c82-4982-b716-a7a936ed69de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="example">
+      <UniqueIdentifier>{ea6d4709-0f75-4c6b-83c0-069e4dd266ae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ncui.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="binding.cc">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="module\IPCNodeV8Handler.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="handler\NodeProcessHandler.cpp">
+      <Filter>handler</Filter>
+    </ClCompile>
+    <ClCompile Include="ipc\NodeMessageEmitter.cpp">
+      <Filter>ipc</Filter>
+    </ClCompile>
+    <ClCompile Include="module\ConstructorMgr.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="module\NodeClassV8Handler.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="module\NodeTypeConvertor.cpp">
+      <Filter>module</Filter>
+    </ClCompile>
+    <ClCompile Include="example\myobject.cc">
+      <Filter>example</Filter>
+    </ClCompile>
+    <ClCompile Include="example\accessors.cpp">
+      <Filter>example</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ncui.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_callbacks.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_callbacks_12_inl.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_callbacks_pre_12_inl.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_converters.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_converters_43_inl.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_converters_pre_43_inl.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_implementation_12_inl.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_implementation_pre_12_inl.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_json.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_maybe_43_inl.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_maybe_pre_43_inl.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_new.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_object_wrap.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_persistent_12_inl.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_persistent_pre_12_inl.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_private.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_string_bytes.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_typedarray_contents.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="nan\nan_weak.h">
+      <Filter>nan</Filter>
+    </ClInclude>
+    <ClInclude Include="module\IPCNodeV8Handler.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="handler\NodeProcessHandler.h">
+      <Filter>handler</Filter>
+    </ClInclude>
+    <ClInclude Include="ipc\NodeMessageEmitter.hpp">
+      <Filter>ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="ipc\NodeProcessExchanger.hpp">
+      <Filter>ipc</Filter>
+    </ClInclude>
+    <ClInclude Include="module\ConstructorMgr.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="module\NodeClassV8Handler.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="module\NodeTypeConvertor.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="module\NodeV8Handler.h">
+      <Filter>module</Filter>
+    </ClInclude>
+    <ClInclude Include="transfer\NodeTransferMgr.hpp">
+      <Filter>transfer</Filter>
+    </ClInclude>
+    <ClInclude Include="example\myobject.h">
+      <Filter>example</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

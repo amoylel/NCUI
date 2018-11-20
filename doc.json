@@ -1,0 +1,75 @@
+{
+    "output_path": "resources/web",
+    "files": [
+        "libNCUI/docs/QuickStart.hpp",
+		"libNCUI/docs/UseNodeJs.hpp",
+		"libNCUI/docs/AdvancedUsage.hpp",
+		"libNCUI/docs/DispatchEvent.hpp",
+		"libNCUI/docs/AppGen.hpp",
+		"libNCUI/docs/Demos.hpp",
+		
+        "libNCUI/settings/AppSettings.h",
+        "libNCUI/settings/SplashWindowSettings.h",
+        "libNCUI/settings/RequestSettings.h",
+        "libNCUI/settings/NativeWindowSettings.h",
+        "libNCUI/settings/BrowserWindowSettings.h",
+
+        "libNCUI/transfer/ClassTransfer.hpp",
+        "libNCUI/transfer/AppTransfer.h",
+        "libNCUI/ui/win/NativeWindowProxy.h",
+        "libNCUI/transfer/BrowserWindowTransfer.h",
+        "libNCUI/transfer/DesktopTransfer.h",
+        "libNCUI/transfer/KeyboardTransfer.h",
+        "libNCUI/transfer/MouseTransfer.h",
+        "libNCUI/transfer/TrayTransfer.h",
+        "libNCUI/transfer/ShellTransfer.h",
+        "libNCUI/transfer/SplashTransfer.h",
+        "libNCUI/transfer/DialogTransfer.h",
+        "libNCUI/transfer/GlobalShortcutTransfer.h",
+        "libNCUI/ui/win/ActionPreprocessor.h",
+        "libNCUI/transfer/MenuTransfer.h",
+        "libNCUI/transfer/DownloaderTransfer.h",
+        "libNCUI/transfer/ThreadTransfer.hpp",
+        "libNCUI/transfer/RendererThreadTransfer.h",
+        "libNCUI/transfer/UIThreadTransfer.h",
+        "libNCUI/transfer/IPCTransfer.h",
+        "libNCUI/transfer/URLRequestTransfer.h",
+        "libNCUI/transfer/NetTransfer.h",
+        "libNCUI/transfer/RunnableTransfer.hpp",
+        "libNCUI/transfer/ActionTransfer.h",
+        "libNCUI/transfer/ClipboardTransfer.h",
+		 
+        "libNCUI/transfer/BrowserTransfer.h",
+        "libNCUI/transfer/FrameTransfer.h",
+        "libNCUI/transfer/BrowserHostTransfer.h",
+
+        "renderer_modules/libsExt/sqlite/SqliteTransfer.h",
+        "renderer_modules/libsExt/transfer/MD5Transfer.h",
+        "renderer_modules/libsExt/transfer/UUIDTransfer.h",
+        "renderer_modules/libsExt/transfer/RegistryTransfer.h",
+        "renderer_modules/libsExt/transfer/Base64Transfer.h",
+        "renderer_modules/libsExt/transfer/ProcessTransfer.h",
+        "renderer_modules/libsExt/transfer/PathTransfer.h",
+		"renderer_modules/libsExt/transfer/FileTransfer.hpp",
+        "renderer_modules/libsExt/rcedit/RceditTransfer.h"
+		
+    ],
+    "version": "0.0.0.1",
+    "updateTime": "2017-09-09 09:26:10",
+    "chapters": {
+        "basic": {
+            "name": "基础",
+            "accent": "green" 
+        },
+        "settings": {
+            "name": "参数设置"
+        },
+		 "api": {
+            "name": "内置接口"
+        },
+        "extend": {
+            "name": "扩展接口"
+        }
+        
+    }
+}

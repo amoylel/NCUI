@@ -1,0 +1,131 @@
+<!--
+****************************************************************************************************
+Microsoft.Cpp.Common.User.props
+
+WARNING:  DO NOT MODIFY this file unless you are knowledgeable about MSBuild and have
+          created a backup copy.  Incorrect changes to this file will make it
+          impossible to load or build your projects from the command-line or the IDE.
+
+Copyright (C) ShineEnergy Corporation. All rights reserved.
+****************************************************************************************************
+-->
+
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <_PropertySheetDisplayName>Cpp Common Properties</_PropertySheetDisplayName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(SolutionDriver)' == ''" >
+		<SolutionDriver>$([System.IO.Path]::GetPathRoot($(SolutionDir)))</SolutionDriver>
+	</PropertyGroup>
+
+  <PropertyGroup Condition="'$(SolutionPrefix)' == ''">
+		<SolutionPrefix>$(SolutionDir)$(SolutionName)</SolutionPrefix>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(ProjectPrefix)' == ''">
+		<ProjectPrefix>$(ProjectDir)$(ProjectName)</ProjectPrefix>
+	</PropertyGroup>
+	
+  <ImportGroup Label="PropertySheets">
+		<!-- import project by Project / Solution / Common properties if file exists -->
+		<Import Project="$(ProjectPrefix).props" Condition="Exists('$(ProjectPrefix).props')" />
+		<Import Project="$(SolutionPrefix).props" Condition="Exists('$(SolutionPrefix).props')" />
+		<Import Project="$(ProjectDir)Project\*.props" Condition="Exists('$(ProjectDir)Project')" />
+		<Import Project="$(ProjectDir)Properties\*.props" Condition="Exists('$(ProjectDir)Properties')" />
+		<Import Project="$(SolutionDir)Project\*.props" Condition="Exists('$(SolutionDir)Project')" />
+		<Import Project="$(SolutionDir)Properties\*.props" Condition="Exists('$(SolutionDir)Properties')" />
+	</ImportGroup>
+
+  <PropertyGroup>
+		<IncludePath>D:\SDK\boost_1_63_0;$(ProjectDir);$(ProjectDir)header;$(ProjectDir)include;$(SolutionDir)amo;$(SolutionDir)include;$(SolutionDir)header;$(SolutionDir)include;$(SolutionDir)third_party;$(SolutionDir);$(SolutionDir)amo;$(IncludePath)</IncludePath>
+		<LibraryPath>D:\SDK\boost_1_63_0\stage\lib;$(ProjectDir)library;$(SolutionDir)library;$(OutDir);$(LibraryPath)</LibraryPath>
+	</PropertyGroup>
+
+  <PropertyGroup>
+		<SingleFolder Condition="'$(SingleFolder)' == ''">false</SingleFolder>
+		<LibraryFolder >$(SolutionDir)../$(SolutionName)-Library\</LibraryFolder>
+		<ObjectFolder Condition="'$(ObjectFolder)' == ''">$(SolutionDir)../$(SolutionName)-Out\VC2012.IntDir\</ObjectFolder>
+		<ObjectFolder Condition="!HasTrailingSlash('$(ObjectFolder)')">$(ObjectFolder)\</ObjectFolder>
+
+		<OutputFolder Condition="'$(OutputFolder)' == ''">$(SolutionDir)../$(SolutionName)-Out</OutputFolder>
+		<OutputFolder Condition="!HasTrailingSlash('$(OutputFolder)')">$(OutputFolder)\</OutputFolder>
+	</PropertyGroup>
+
+  <PropertyGroup Condition="'$(SingleFolder)' == 'false'">
+		<ImportFolder Condition="'$(ImportFolder)' == ''">$(OutputFolder)Library\</ImportFolder>
+		<SymbolFolder Condition="'$(SymbolFolder)' == ''">$(OutputFolder)Symbol\</SymbolFolder>
+		<BinaryFolder Condition="'$(BinaryFolder)' == ''">$(OutputFolder)Binary</BinaryFolder>
+		
+	</PropertyGroup>
+
+  <PropertyGroup Condition="'$(SingleFolder)' != 'false'">
+		<ImportFolder Condition="'$(ImportFolder)' == ''">$(OutputFolder)</ImportFolder>
+		<SymbolFolder Condition="'$(SymbolFolder)' == ''">$(OutputFolder)</SymbolFolder>
+		<BinaryFolder Condition="'$(BinaryFolder)' == ''">$(OutputFolder)</BinaryFolder> 
+	</PropertyGroup>
+
+	<PropertyGroup Condition="Exists('$(ImportFolder)')">
+		<LibraryPath>$(ImportFolder);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<SuffixCharSet Condition="'$(CharacterSet)' == 'Unicode'">U</SuffixCharSet>
+		<SuffixCharSet Condition="'$(CharacterSet)' != 'Unicode'">M</SuffixCharSet>
+		<SuffixRelease Condition="'$(Configuration)' == 'Debug'">D</SuffixRelease>
+		<SuffixRelease Condition="'$(Configuration)' != 'Debug'">R</SuffixRelease>
+		<SuffixMachine>$(PlatformArchitecture)</SuffixMachine>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<TargetOutput Condition="'$(TargetOutput)' == ''">$(TargetName)</TargetOutput>
+		<TargetSuffix>$(SuffixCharSet)$(SuffixRelease)$(SuffixMachine)</TargetSuffix>
+		<IntDir>$(ObjectFolder)$(ProjectName).$(TargetSuffix)\</IntDir>
+		<OutputName>$(TargetOutput)$(TargetSuffix)</OutputName>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(ConfigurationType)' != 'StaticLibrary'">
+		<OutDir Condition="'$(SingleFolder)' == 'false'">$(BinaryFolder).$(TargetSuffix)\</OutDir>
+		<OutDir Condition="'$(SingleFolder)' != 'false'">$(BinaryFolder)</OutDir>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(ConfigurationType)' == 'StaticLibrary'">
+		<OutDir>$(ImportFolder)</OutDir>
+	</PropertyGroup>
+
+	<ItemDefinitionGroup>
+    <ClCompile Condition="'$(ConfigurationType)' == 'StaticLibrary'">
+      <ProgramDataBaseFileName>$(SymbolFolder)Compile\$(OutputName).pdb</ProgramDataBaseFileName>
+    </ClCompile>
+
+    <ClCompile Condition="'%(ClCompile.DebugInformationFormat)' == ''">
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+
+    <Link>
+			<ProgramDatabaseFile>$(SymbolFolder)Debuger\$(OutputName).pdb</ProgramDatabaseFile>
+			<ImportLibrary>$(ImportFolder)$(OutputName).lib</ImportLibrary>
+    </Link>
+
+		<!-- Output Public Symbols If Folder Exists -->
+    <Link Condition="Exists('$(SymbolFolder)Publish')">
+			<StripPrivateSymbols>$(SymbolFolder)Publish\$(OutputName).pdb</StripPrivateSymbols>
+    </Link>
+  </ItemDefinitionGroup>
+
+	<!-- Append $(TargetSuffix) for OutputFile's Name -->
+	<PropertyGroup Condition="'$(TargetName)' == '$(ProjectName)'">
+		<TargetName Condition="'$(TargetOutput)' != ''">$(TargetOutput)</TargetName>
+		<TargetName Condition="'$(SingleFolder)' != 'false'">$(OutputName)</TargetName>
+		<TargetName Condition="'$(ConfigurationType)' == 'StaticLibrary'">$(OutputName)</TargetName>
+	</PropertyGroup>
+
+	<PropertyGroup>
+			<OutputPath Condition="'$(OutputPath)' != '$(OutDir)'">$(OutDir)</OutputPath>
+	</PropertyGroup>
+ <PropertyGroup>
+		<ReferencePath>$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib</ReferencePath>
+		<SourcePath>$(VCInstallDir)atlmfc\src\mfc;$(VCInstallDir)atlmfc\src\mfcm;$(VCInstallDir)atlmfc\src\atl;$(VCInstallDir)crt\src;</SourcePath>
+		<ExcludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;$(MSBuildToolsPath32);$(VCInstallDir)atlmfc\lib;$(VCInstallDir)lib;</ExcludePath>
+	</PropertyGroup>
+</Project>
